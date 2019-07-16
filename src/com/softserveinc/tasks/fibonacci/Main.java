@@ -2,32 +2,32 @@ package com.softserveinc.tasks.fibonacci;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length < 1){
-            System.out.println("Invalid arguments");
+        if (args.length != 2) {
+            System.out.println("You need to enter 2 int args");
             return;
         }
 
-        String[] scope = args[0].split(",");
-
-        int fib = 0;
-
         try {
-            for (int i = 0; fib < Integer.parseInt(scope[1]); i++) {
-                fib = fibonacci(i);
-                if (fib >= Integer.parseInt(scope[0])) {
-                    System.out.println(fib);
-                }
-            }
-
-        } catch (NumberFormatException e){
-            System.out.println("Incorrect input. Arguments must be integers");
+            printFibonacci(Integer.parseInt(args[0]),
+                    Integer.parseInt(args[1]));
+        } catch (NumberFormatException e) {
+            System.out.println("Arguments must be integers");
         }
     }
 
-    private static int fibonacci(int n){
-        if (n <= 1){
-            return n;
+
+    private static void printFibonacci(int a, int b) {
+        int current = 0;
+        int next = 1;
+
+        while (next <= b) {
+            int tmp = current + next;
+            current = next;
+            next = tmp;
+
+            if (current >= a && current <= b) {
+                System.out.println(current);
+            }
         }
-        return fibonacci(n-1) + fibonacci(n-2);
     }
 }
