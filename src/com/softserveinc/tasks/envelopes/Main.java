@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter envelope`s sides");
 
+        Scanner scanner = new Scanner(System.in);
         do {
             try {
                 System.out.print("Enter a: ");

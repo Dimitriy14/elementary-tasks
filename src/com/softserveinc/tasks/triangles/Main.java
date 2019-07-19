@@ -21,7 +21,10 @@ public class Main {
 
                 String[] arguments = input.replaceAll("\\s+", "").split(",");
 
-                triangles.add(new Triangle(arguments[0], Double.parseDouble(arguments[1]), Double.parseDouble(arguments[2]), Double.parseDouble(arguments[3])));
+                triangles.add(new Triangle(arguments[0],
+                        Double.parseDouble(arguments[1]),
+                        Double.parseDouble(arguments[2]),
+                        Double.parseDouble(arguments[3])));
 
             } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
                 System.out.println("Incorrect input format");
@@ -45,6 +48,7 @@ public class Main {
     }
 
     private static boolean tryAgain(String answ) {
-        return answ.equalsIgnoreCase("y") || answ.equalsIgnoreCase("yes");
+        return answ.equalsIgnoreCase("y") ||
+                answ.equalsIgnoreCase("yes");
     }
 }

@@ -17,15 +17,14 @@ public class Main {
 
             printSeq(n);
 
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println("It`s not a number!");
             e.printStackTrace();
         }
-
     }
 
-    static void printSeq(int n){
-        for (int i = 0; Math.pow(i,2) <= n; i++){
+    static void printSeq(int n) {
+        for (int i = 0; Math.pow(i, 2) <= n; i++) {
             System.out.println(i);
         }
     }
