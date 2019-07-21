@@ -1,22 +1,16 @@
 package com.softserveinc.tasks.envelopes;
 
 public class Envelope {
-    private float height;
-    private float width;
+    private double height;
+    private double width;
 
     /**
      * create an envelope
      *
      * @param height - height of envelope
      * @param width  - width of envelope
-     * @throws IllegalArgumentException is thrown in case if params are lower than 0
      */
-    Envelope(float height, float width) throws IllegalArgumentException {
-        if (width <= 0 || height <= 0) {
-            throw new IllegalArgumentException(
-                    "Envelope`s sides must be greater than 0");
-        }
-
+    public Envelope(double height, double width){
         this.height = height;
         this.width = width;
     }
@@ -26,7 +20,8 @@ public class Envelope {
      *
      * @param envelope - inserted envelope
      */
-    boolean canInsert(Envelope envelope) {
+    public boolean canInsert(Envelope envelope)
+    {
         return this.height > envelope.height && this.width > envelope.width;
     }
 }

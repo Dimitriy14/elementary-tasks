@@ -13,19 +13,8 @@ public class Triangle {
      *
      * @param name  - name of triangle
      * @param a,b,c - sides of triangle
-     * @throws IllegalArgumentException is thrown in case if params are lower than 0
      */
-    public Triangle(String name, double a, double b, double c) throws NotValidTriangleException {
-        if (a <= 0 || b <= 0 || c <= 0) {
-            throw new NotValidTriangleException("sides should be greater than 0");
-        }
-
-        if (a + b <= c || a + c <= b || c + b <= a) {
-            throw new NotValidTriangleException(
-                    "it`s not possible to create a triangle with sides: " +
-                            a + "," + b + "," + c);
-        }
-
+    public Triangle(String name, double a, double b, double c){
         this.name = name;
         this.a = a;
         this.b = b;
