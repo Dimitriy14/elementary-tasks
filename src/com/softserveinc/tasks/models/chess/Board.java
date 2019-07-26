@@ -1,8 +1,7 @@
-package com.softserveinc.tasks.task1.chess;
+package com.softserveinc.tasks.models.chess;
 
-import com.softserveinc.tasks.task1.Fields;
 
-public class Board implements Fields {
+public class Board {
     private int width;
     private int height;
 
@@ -18,10 +17,10 @@ public class Board implements Fields {
     }
 
     /**
-     * prints chessboard
+     * creates chessboard with height and width
      */
     @Override
-    public StringBuilder create() {
+    public String toString() {
         StringBuilder field = new StringBuilder();
 
         for (int i = 0; i < this.height; i++) {
@@ -32,6 +31,6 @@ public class Board implements Fields {
             }
             field.append("\n");
         }
-        return field;
+        return new String(field);
     }
 }

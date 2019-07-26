@@ -1,15 +1,14 @@
-package com.softserveinc.tasks.triangles;
+package com.softserveinc.tasks.models.Shape;
 
-public class Triangle {
+public class Triangle implements Shape {
     private String name;
     private double a;
     private double b;
     private double c;
     private double square;
 
-
     /**
-     * create an envelope
+     * create Triangle
      *
      * @param name  - name of triangle
      * @param a,b,c - sides of triangle
@@ -38,10 +37,12 @@ public class Triangle {
         return Math.sqrt(hp * (hp - this.a) * (hp - this.b) * (hp - this.c));
     }
 
+    @Override
     public String getName() {
         return this.name;
     }
 
+    @Override
     public double getSquare() {
         return this.square;
     }

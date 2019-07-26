@@ -1,4 +1,4 @@
-package com.softserveinc.tasks.sequence;
+package com.softserveinc.tasks.models.sequence;
 
 public class Main {
     public static void main(String[] args) {
