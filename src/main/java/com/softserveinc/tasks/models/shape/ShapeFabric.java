@@ -1,4 +1,4 @@
-package com.softserveinc.tasks.models.Shape;
+package com.softserveinc.tasks.models.shape;
 
 import com.softserveinc.tasks.validator.Validator;
 

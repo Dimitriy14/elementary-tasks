@@ -1,9 +1,9 @@
-package com.softserveinc.tasks.numbers.Core;
+package com.softserveinc.tasks.services;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Numbers {
+public class NumberToWord {
     public static Map<Integer, String> numNames = new HashMap<>();
     public static Map<Integer, String> tensNames = new HashMap<>();
     public static Map<Integer, String> hundredsNames = new HashMap<>();

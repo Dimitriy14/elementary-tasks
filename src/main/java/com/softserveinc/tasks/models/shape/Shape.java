@@ -1,4 +1,4 @@
-package com.softserveinc.tasks.models.Shape;
+package com.softserveinc.tasks.models.shape;
 
 public interface Shape {
     String getName();

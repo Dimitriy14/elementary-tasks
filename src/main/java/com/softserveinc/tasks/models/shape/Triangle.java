@@ -1,4 +1,4 @@
-package com.softserveinc.tasks.models.Shape;
+package com.softserveinc.tasks.models.shape;
 
 public class Triangle implements Shape {
     private String name;
